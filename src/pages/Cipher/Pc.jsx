@@ -43,7 +43,7 @@ const Pc = () => {
       return;
     }
 
-    fetch('http://localhost:8080/playFairCipher', {
+    fetch('https://ciphervault-cryptography.up.railway.app/playFairCipher', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -121,7 +121,7 @@ const Pc = () => {
       }
     }    
     
-    fetch('http://localhost:8080/playFairCipher', {
+    fetch('https://ciphervault-cryptography.up.railway.app/playFairCipher', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

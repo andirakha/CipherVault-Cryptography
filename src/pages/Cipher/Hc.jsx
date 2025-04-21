@@ -68,7 +68,7 @@ const Hc = () => {
       return;
     }
 
-    fetch("http://localhost:8080/hillCipher", {
+    fetch("https://ciphervault-cryptography.up.railway.app/hillCipher", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -121,7 +121,7 @@ const Hc = () => {
       return;
     }
 
-    fetch("http://localhost:8080/hillCipher", {
+    fetch("https://ciphervault-cryptography.up.railway.app/hillCipher", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

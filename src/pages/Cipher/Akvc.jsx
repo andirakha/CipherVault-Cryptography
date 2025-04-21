@@ -43,7 +43,7 @@ const Akvc = () => {
       return;
     }
 
-    fetch('http://localhost:8080/autokeyVigenere', {
+    fetch('https://ciphervault-cryptography.up.railway.app/autokeyVigenere', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -95,7 +95,7 @@ const Akvc = () => {
       alert("Key must only contain alphabetic characters");
       return;
     }
-    fetch('http://localhost:8080/autokeyVigenere', {
+    fetch('https://ciphervault-cryptography.up.railway.app/autokeyVigenere', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

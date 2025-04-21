@@ -43,7 +43,7 @@ const Vcs = () => {
       return;
     }
 
-    fetch('http://localhost:8080/vigenereCipher', {
+    fetch('https://ciphervault-cryptography.up.railway.app/vigenereCipher', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -96,7 +96,7 @@ const Vcs = () => {
       return;
     }
 
-    fetch('http://localhost:8080/vigenereCipher', {
+    fetch('https://ciphervault-cryptography.up.railway.app/vigenereCipher', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

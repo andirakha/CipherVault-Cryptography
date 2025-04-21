@@ -43,7 +43,7 @@ const Ac = () => {
         return;
       }
       
-      fetch('http://localhost:8080/affineCipher', {
+      fetch('https://ciphervault-cryptography.up.railway.app/affineCipher', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ const Ac = () => {
         return;
       }
 
-      fetch('http://localhost:8080/affineCipher', {
+      fetch('https://ciphervault-cryptography.up.railway.app/affineCipher', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

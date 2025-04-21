@@ -52,7 +52,7 @@ const Evc = () => {
     console.log("Tipe data plainText:", isBinary ? "Uint8Array" : typeof plainText);
     console.log("Isi plainText:", isBinary ? Array.from(plainText) : plainText);
   
-    fetch("http://localhost:8080/extendedVigenere", {
+    fetch("https://ciphervault-cryptography.up.railway.app/extendedVigenere", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -145,7 +145,7 @@ const Evc = () => {
       ? new Uint8Array(input.cipherText.split(" ").map(Number)) // Convert to Uint8Array if binary
       : input.cipherText;
   
-    fetch("http://localhost:8080/extendedVigenere", {
+    fetch("https://ciphervault-cryptography.up.railway.app/extendedVigenere", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
