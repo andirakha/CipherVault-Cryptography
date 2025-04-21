@@ -1,0 +1,89 @@
+.textField {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #989898;
+    grid-column: span 2;
+    height: 316px;
+}
+
+.textField > hr {
+    border: 1px solid #989898;
+}
+
+.textTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 1rem;
+    color: black;
+}
+
+.textTitle select {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 75px;
+}
+
+.textInput {
+    width: 100%;
+    height: 170px;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    background: white;
+    outline: none;
+    resize: none;
+    border: 1px solid white;
+    color: black;
+}
+
+.textFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+
+.footerWrap {
+    display: flex;
+    gap: 15px;
+}
+
+.chiperKey {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #989898;
+    height: 116px;
+}
+
+.chiperKey input {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+    outline: none;
+}
+
+.chiperKey h2 {
+    color: black;
+    font-size: 1rem;
+    font-weight: medium;
+    text-align: start;
+}
+
+.keyTitle {
+display: flex;
+align-items: center;
+padding: 10px;
+}
+
+.iconKey {
+width: auto;
+height: 16px;
+padding-right: 8px;
+}

@@ -1,0 +1,379 @@
+.sidebarContainer, .darkMode .sidebarContainer {
+    padding: 20px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    gap: 20px;
+    z-index: 2000;
+    width: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: width 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.darkMode .sidebarContainer {
+    background-color: #1C1C1E;
+    border-right: 1px solid #ffffff;
+    transition: border-right 0.3s ease, background-color 0.3s ease, width 0.3s ease, filter 0.3s ease;
+}
+
+.sidebarContainer.expanded {
+    width: 250px; /* Adjust the width as needed */
+    align-items: flex-start;
+    padding-left: 15px;
+    overflow-y: auto;
+}
+
+.sidebarContainer.expanded .wrapper{
+width: 220px;
+justify-content: flex-start;
+padding-left: 10px;
+}
+
+.sidebarContainer.expanded .wrapperHome{
+width: 220px;
+justify-content: flex-start; 
+padding-left: 10px;
+}
+
+.sidebarContainer.expanded .wrapperMenu > button{
+background-color: #ffffff;
+}
+
+.darkMode .sidebarContainer.expanded .wrapperMenu > button{
+    background-color: #1C1C1E;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    min-width: 50px; /* Add this line */
+    min-height: 50px;
+    transition: width 0.3s ease, background-color 0.3s ease; 
+    cursor: pointer; /* Add this line */
+}
+
+.wrapperUnselected {
+    background-color: #E8EAF6; /* Default background color */
+    cursor: pointer;
+}
+
+.darkMode .wrapperUnselected {
+    background-color: #282828; /* Default background color */
+    cursor: pointer;
+}
+
+.wrapperSelected {
+    background-color: #5C6BC0; /* Selected background color */
+    cursor: default;
+}
+
+.darkMode .wrapperSelected{
+    background-color: #3F51B5; /* Selected background color */
+    cursor: default;
+}
+
+.wrapper > a, .darkMode .wrapper > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.wrapper > a {
+    color: #5c6bc0;
+    transition: color 0.3s ease;
+}
+
+.darkMode .wrapper > a {
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.wrapper h3 {
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute; /* Add this line */
+    pointer-events: none;
+}
+
+.wrapperSelected h3 {
+    color: #FFFFFF;
+}
+
+.wrapperUnselected h3 {
+    color: #5c6bc0;
+}
+
+.darkMode .wrapperUnselected h3 {
+    color: #ffffff;
+}
+
+.sidebarContainer.expanded .wrapper h3 {
+    margin-left: 40px; /* Adjust the spacing as needed */
+    font-size: 0.85rem;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.1s;
+    position: static; /* Add this line */
+    font-weight:400;
+}
+
+.wrapperMenu {
+    display: flex;
+    align-items: center;
+     /* Pastikan tombol tetap di tengah */
+    flex-shrink: 0; /* Mencegah elemen menyusut */
+    min-width: 50px; /* Tambahkan batas minimum lebar */
+    min-height: 50px; /* Tambahkan batas minimum tinggi */
+}
+
+.wrapperMenu > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8EAF6;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Mencegah tombol menyusut */
+    min-width: 50px; /* Tambahkan batas minimum lebar */
+    min-height: 50px; /* Tambahkan batas minimum tinggi */
+}
+
+.darkMode .wrapperMenu > button {
+    background-color: #1C1C1E;
+}
+
+.wrapperMenu > button > img {
+    width: 25px;
+    filter: none;
+    transition: filter 0.3s ease;
+}
+
+.darkMode .wrapperMenu > button > img {
+    width: 25px;
+    filter: brightness(0) invert(1); /* Mengubah warna ikon menjadi putih */
+    transition: filter 0.3s ease;
+}
+
+.sidebarContainer.expanded .wrapperMenu h2 {
+margin-left: 10px; /* Adjust the spacing as needed */
+font-size: 1.13rem;
+opacity: 1;
+transition: opacity 0.3s ease-in-out 0.1s;
+position: static; /* Add this line */
+font-weight:500;
+pointer-events:fill;
+}
+
+.wrapperMenu h2, .darkMode .wrapperMenu h2 {
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+.wrapperMenu h2 {
+    color: #5c6bc0;
+}
+
+.darkMode .wrapperMenu h2 {
+    color: #ffffff;
+}
+
+.wrapperHome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    justify-content: flex-start; 
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px; /* Add this line */
+    min-height: 50px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.wrapperHomeUnselected {
+    background-color: #E8EAF6; /* Default background color */
+    cursor: pointer;
+}
+
+.wrapperHomeSelected {
+    background-color: #5C6BC0; /* Selected background color */
+    cursor: default;
+}
+
+.darkMode .wrapperHomeSelected {
+    background-color: #3F51B5; /* Selected background color */
+    cursor: default;
+}
+
+.darkMode .wrapperHomeUnselected {
+    background-color: #282828; /* Default background color */
+    cursor: pointer;
+}
+
+.wrapperHome > a {
+    background-color: #ffffff;
+    padding: 3px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.wrapperHome > a > img {
+    width: 25px;
+    height: 25px;
+    transition: filter 0.3s ease;
+}
+
+.darkMode .wrapperHome > a > img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(0); /* Mengubah warna ikon menjadi putih */
+    transition: filter 0.3s ease;
+}
+
+.wrapperHome h3 {
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute; /* Add this line */
+    right: 300%;
+    color: #5c6bc0;
+}
+
+.wrapperHomeSelected h3 {
+    color: #FFFFFF;
+}
+
+.wrapperHomeUnselected h3 {
+    color: #5c6bc0;
+}
+
+.darkMode .wrapperHomeUnselected h3 {
+    color: #ffffff;
+}
+
+
+.sidebarContainer.expanded .wrapperHome h3 {
+    margin-left: 40px; /* Adjust the spacing as needed */
+    font-size: 1rem;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.1s;
+    position: static; /* Add this line */
+    font-weight:400;
+}
+
+.hide {
+display: none;
+}
+
+.openbarContainer {
+z-index: 3000;
+position: fixed;
+height: 100vh;
+display: flex;
+flex-direction: column;
+gap: 20px;
+background-color: #FFFFFF;
+padding: 35px 15px 15px 15px;
+}
+
+.wrapperHidesideMenu > button > img {
+width: 30px;
+}
+
+.wrapperHidesideMenu > button > h4 {
+font-size: 1.2rem;
+}
+
+.wrapperHidesideMenu > button {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+}
+
+.wrapperHidesideHome > a {
+background-color: #E8EAF6;
+display: flex;
+height: 50px;
+flex-direction: row;
+align-items: center;
+gap: 15px;
+padding: 0px 10px;
+border-radius: 5px;
+}
+
+.wrapperHidesideHome > a > img {
+width: 28px;
+padding: 3px;
+border-radius: 5px;
+background-color: #ffffff;
+}
+
+.wrapperHidesideHome > a > h4 {
+font-size: 0.9rem;
+}
+
+.wrapperHideside > a {
+background-color: #E8EAF6;
+display: flex;
+height: 50px;
+flex-direction: row;
+align-items: center;
+gap: 15px;
+padding: 0px 10px;
+border-radius: 5px;
+}
+
+.wrapperHideside > a > h1 {
+color: #5c6bc0;
+width: 25px;
+height: 25px;
+border-radius: 5px;
+text-align: center;
+background-color: #ffffff;
+}
+
+.wrapperHideside > a > h4 {
+    font-size: 0.8rem;
+    width: 130px;
+}
+
+.blur {
+    transition: filter 0.3s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999; /* Ensure it is above other elements */
+}

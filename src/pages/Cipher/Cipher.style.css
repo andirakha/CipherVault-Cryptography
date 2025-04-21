@@ -1,0 +1,197 @@
+/* hippeontainer utama */
+.landing-container {
+  display: flex;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding-left: 80px;
+  padding-top: 96px;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+}
+
+.sidebar.open + .main-content {
+  margin-left: 16rem;
+}
+
+.navbar {
+  display: flex;
+  height: 96px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #8590cf;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  position: fixed; /* Agar tetap di posisi atas */
+  top: 0; /* Menempel di bagian atas */
+  left: 0;
+  width: 100%; /* Lebar penuh */
+  z-index: 1000; /* Pastikan berada di atas elemen lain */
+  padding-left: 80px;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  font-weight: medium;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.toggle-darkmode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+}
+
+.toggle-darkmode-t {
+  background-color: #282828;
+  color: #FFFFFF;
+}
+
+.toggle-darkmode-f {
+  background-color: white;
+  color: #3949AB;
+}
+
+.toggle-darkmode:hover {
+  background-color: #9FA8DA;
+}
+
+.slider {
+  height: 20px;
+  width: 40px;
+  background-color: #8590cf;
+  border-radius: 30px;
+  display: flex;
+  padding: 2px;
+  margin-left: 0px;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.slider i {
+  padding-left: 2px;
+  width: 18px;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 12px;
+  margin-left: 0px;
+  transition: margin-left 0.3s ease;
+}
+
+.content {
+  font-size: 2rem;
+  background-color: #D4D8F4;
+  color: #FFFF;
+  padding: 2rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.chiper-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 2rem;
+  justify-content: space-around;
+  text-align: center;
+  gap: 40px;
+}
+
+.chiper-key {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid #989898;
+  padding: 5px;
+  gap: 5px;
+}
+
+.chiper-key h2 {
+  color: black;
+  font-size: 1rem;
+  font-weight: medium;
+  text-align: start;
+}
+
+.chiper-key input {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  height: 30px;
+}
+
+.chiper-key input:focus {
+  outline: none;
+}
+
+.chiper-key input::placeholder {
+  font-size: 15px;
+}
+
+.chiper-key p {
+  text-align: start;
+  font-size: 9px;
+  color: #989898;
+  font-style: italic;
+}
+
+.key-title {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.icon-key {
+  width: auto;
+  height: 16px;
+  padding-right: 8px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.flex-container.small-gap {
+  gap: 30px;
+}
+
+.affine-container {
+  margin-top: -50px;
+}
+
+.icon-arrow {
+  font-size: 6rem;
+  color: #3949AB;
+}
+
+.icon {
+  width: 18px;
+  height: auto;
+  margin: 0px 0px 0px 5px;
+}
+
+.plaintext-wrapper {
+  grid-column: span 2; /* Atur ini sesuai slot grid PlainTextField awal */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Agar anaknya (PlainTextField) tidak aneh */
+  width: 100%;
+  gap: 30px;
+}

@@ -1,0 +1,35 @@
+.uploadBtn {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background: white;
+    border: 1px solid black;
+    color: black;
+    user-select: none;
+}
+
+.uploadBtn:hover {
+    background: #dcdbdb;
+}
+
+.downloadBtn {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background: #5c6bc0;
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.downloadBtn:hover {
+    background: #3f51b5;
+}

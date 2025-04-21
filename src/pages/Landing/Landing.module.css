@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* Container utama */
+.landingContainer {
+  display: flex;
+  height: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Main content */
+.mainContent {
+  flex: 1;
+  padding-top: 96px;
+  padding-left: 80px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebarOpen + .mainContent {
+  margin-left: 16rem;
+}
+
+.navbar {
+  display: flex;
+  height: 96px;
+  align-items: center;
+  justify-content: space-between; /* Sesuaikan dengan konten */
+  padding: 1rem;
+  background-color: #8590cf;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+
+  position: fixed; /* Agar tetap di posisi atas */
+  top: 0; /* Menempel di bagian atas */
+  left: 0;
+  width: 100%; /* Lebar penuh */
+  z-index: 1000; /* Pastikan berada di atas elemen lain */
+  padding-left: 80px;
+}
+
+.navbarTitle {
+  font-size: 2rem;
+  font-weight: medium;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.toggleDarkmode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+  cursor: pointer;
+  position: absolute;
+  right: 25px;
+}
+
+.toggleDarkmodeT {
+  background-color: #282828;
+  color: #FFFFFF;
+}
+
+.toggleDarkmodeF {
+  background-color: white;
+  color: #3949AB;
+}
+
+.toggleDarkmode:hover {
+  background-color: #9FA8DA;
+}
+
+.slider {
+  height: 20px;
+  width: 40px;
+  border-radius: 30px;
+  display: flex;
+  padding: 2px;
+  margin-left: 0px;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.slider i {
+  padding-left: 2px;
+  width: 18px;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 12px;
+  margin-left: 0px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Content */
+.contentTitle {
+  font-size: 2rem;
+  background-color: #D4D8F4;
+  color: white;
+  padding: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.contentText {
+  font-size: 1.3rem;
+  padding: 2rem;
+}
+
+.cipherCards {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  text-align: center;
+  gap: 50px;
+}
+
+@media (min-width: 768px) {
+  .cipherCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cipherCard {
+  border-radius: 6px;
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  outline: 1px solid black;
+}
+
+.chiperTitle {
+  background-color: #5C6BC0;
+  color: white;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 1rem;
+  font-size: 1.3rem;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.chiperText {
+  color: black;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.darkMode .cipherCard {
+  background-color: #2d3748;
+  color: white;
+}
